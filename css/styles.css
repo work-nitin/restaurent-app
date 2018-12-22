@@ -226,6 +226,7 @@ nav h1 a {
 #restaurant-address {
   font-size: 12pt;
   margin: 10px 0px;
+
 }
 #restaurant-cuisine {
   background-color: #333;
@@ -248,17 +249,17 @@ nav h1 a {
 #reviews-container {
   padding: 30px 40px 80px;
 }
-#reviews-container h2 {
-  color: #f58500;
-  font-size: 24pt;
-  font-weight: 300;
-  letter-spacing: -1px;
-  padding-bottom: 1pt;
-}
-#reviews-list {
-  margin: 0;
-  padding: 0;
-}
+	#reviews-container h2 {
+	  color: #f58500;
+	  font-size: 24pt;
+	  font-weight: 300;
+	  letter-spacing: -1px;
+	  padding-bottom: 1pt;
+	}
+	#reviews-list {
+	  margin: 0;
+	  padding: 0;
+	}
 #reviews-list li {
   background-color: #fff;
     border: 2px solid #f3f3f3;
@@ -276,3 +277,70 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+#restaurant-container {
+	width: 40%;
+}
+
+body,td{
+	font-size: 6.7pt;
+}
+#restaurant-name {
+  font-size: 1pt;
+  font-weight: 70;
+}
+#restaurant-img {
+	width: 90%;
+}
+#restaurant-address {
+  font-size: 9pt;
+}
+
+#reviews-container h2 {
+	font-size: 12pt;
+	font-weight: 100;
+	letter-spacing: -1px;
+	padding-bottom: 1pt;
+}
+#reviews-list {
+	width:62%;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	font-size: 4pt;
+	color: #333;
+}
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	#restaurant-container {
+		width: 40%;
+	}
+
+	body,td{
+		font-size: 15pt;
+	}
+
+	p{
+		font-size: 15pt;
+	}
+
+	#restaurant-address {
+	  font-size: 22pt;
+	}
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
