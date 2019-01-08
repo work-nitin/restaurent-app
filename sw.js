@@ -20,20 +20,14 @@ const cacheFiles = [
         '/img/9.jpg',
         '/img/10.jpg'
 ];
-
 /** cache static assets from the application*/
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll(cacheFiles);
-    })
-  );
-});
-
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
-    })
-  );
-})
+self.addEventListener( 'install', function( event ) {
+	event.waitUntil( caches.open( 'v1' ).then( function( cache ) {
+		return cache.addAll( cacheFiles );
+	} ) );
+} );
+self.addEventListener( 'fetch', function( event ) {
+	event.respondWith( caches.match( event.request ).then( function( response ) {
+		return response || fetch( event.request );
+	} ) );
+} )
